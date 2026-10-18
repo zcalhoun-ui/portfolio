@@ -153,7 +153,7 @@
     }
 
     .hero-title {
-      font-size: 3rem;
+      font-size: 2rem;
       line-height: 1.1;
       margin-bottom: 1rem;
     }
@@ -276,8 +276,8 @@
   <main>
     <!-- HERO -->
     <section class="hero">
-      <span class="hero-tag">Undergraduate Data Science Major</span>
-      <h1 class="hero-title">Quantitative Analysis, Spatial Modeling & Machine Learning</h1>
+      <span class="hero-tag">About Me</span>
+      <p class="hero-title">Quantitative Analysis, Spatial Modeling & Machine Learning </p>
       <p class="hero-bio">
         My name is Zenobia Calhoun. I am a Statistical & Data Sciences major at Smith College, graduating in May 2028. I am passionate about precise statistical modeling and its real world applications, including machine learning.
       </p>
@@ -292,6 +292,10 @@
            style="display: inline-block; padding: 0.5rem 1rem; border: 2px solid var(--border-color); background: var(--accent); color: #ffffff; font-family: var(--font-display); font-size: 1.15rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; transition: opacity 0.2s;">
           LinkedIn &rarr;
         </a>
+        <a href="https://seethesparkle-theta.vercel.app/" target="_blank" rel="noopener noreferrer" 
+           style="display: inline-block; padding: 0.5rem 1rem; border: 2px solid var(--border-color); background: var(--bg-main); color: var(--text-main); font-family: var(--font-display); font-size: 1.15rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; transition: background 0.2s;">
+          Currently working on &rarr;
+        </a>
       </div>
     </section>
 
@@ -300,13 +304,18 @@
       <h2>Academic & Career Goals</h2>
       <div class="grid-2">
         <div class="card">
-          <h3> GPA: 3.87/4.00</h3>
+         <h3 style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <span>Smith College '28</span>
+  <span>GPA: 3.87/4.00</span>
+</h3>
           <p> Relevant Coursework: Statistical Methods for Undergraduates (SDS 201), Introduction to Data Science (SDS 192), Linear Algebra (MTH 211),
 Introduction to Computer Science (CSC 110), Multiple Regression (SDS 291), Programming for Data Science in Python (SDS 270)</p>
         </div>
         <div class="card">
           <h3>Long-Term Vision</h3>
-          <p>Develop automated open-data processing systems that support sustainable urban infrastructure, housing accessibility, and public transportation optimization.</p>
+          <p>I will leverage advanced statistical modeling and computational research methods to 
+            analyze complex human behavior and high-dimensional datasets; I will build data-informed solutions in 
+            for interdisciplinary environments.</p>
         </div>
       </div>
     </section>
@@ -319,10 +328,16 @@ Introduction to Computer Science (CSC 110), Multiple Regression (SDS 291), Progr
           <h3>Languages & Libraries</h3>
           <ul class="skills-list">
             <li>Python</li>
+            <li>NumPy</li>
+            <li>SciPy</li>
+            <li>PANDAS </li>
+            <li> matplotlib </li>
+            <li> Git/GitHub </li>
             <li>R </li>
             <li>SQL</li>
             <li>Bash</li>
-            <li>HTML/CSS</li>
+            <li>HTML</li>
+            <li>CSS</li>
             <li>JavaScript React </li>
             <li>MatLab </li>
 
@@ -331,11 +346,13 @@ Introduction to Computer Science (CSC 110), Multiple Regression (SDS 291), Progr
         <div class="card">
           <h3>Skills</h3>
           <ul class="skills-list">
-            <li>Tidyverse / Leaflet</li>
-            <li>Pandas / Scikit-Learn</li>
-            <li>GeoPandas / SF</li>
-            <li>Git / GitHub</li>
-            <li>Streamlit</li>
+            <li>Hypothesis Testing</li>
+            <li>Sensitivity Analysis</li>
+            <li>Data Wrangling</li>
+            <li> Repository Management </li>
+            <li>Data Visualizations </li>
+            <li>Developmental Pipeline </li>
+            <li>Scientific Communication </li>
           </ul>
         </div>
       </div>
@@ -364,9 +381,15 @@ Introduction to Computer Science (CSC 110), Multiple Regression (SDS 291), Progr
         <option value="3">3 - Summer</option>
         <option value="4">4 - Fall</option>
       </select>
-      <button onclick="runModel()" style="padding: 0.35rem 0.8rem; background: var(--border-color); color: white; border: none; font-family: var(--font-display); font-size: 1rem; cursor: pointer;">
-        RUN TENSOR MODEL
-      </button>
+      <button onclick="runModel()" style="padding: 0.35rem 0.8rem; background: var(--border-color); color: white; border: none; font-family: var(--font-display); font-size: 1rem; cursor: pointer; display: inline-block; line-height: 1.15; vertical-align: middle;">
+  RUN TENSOR MODEL
+</button>
+
+<!-- MATCHING REPOSITORY BUTTON -->
+<a href="https://github.com/zcalhoun-ui/magicmycloset" target="_blank" rel="noopener noreferrer" 
+   style="padding: 0.35rem 0.8rem; background: var(--border-color); color: white; border: none; font-family: var(--font-display); font-size: 1rem; text-decoration: none; text-transform: uppercase; cursor: pointer; display: inline-block; line-height: 1.15; vertical-align: middle;">
+  VIEW REPOSITORY
+</a>
     </div>
 
     <!-- OUTPUT TABLE CONTAINER -->
