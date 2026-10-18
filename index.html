@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Science Portfolio | Undergraduate</title>
+
+  <!-- Google Font: Instrument Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #fcfcfc;
+      --bg-card: #ffffff;
+      --text-main: #111111;
+      --text-muted: #444444;
+      --border-color: #111111;
+      --accent: #5481b6;
+      --accent-alt: #6059d6;
+      --font-display: "Instrument Serif", Georgia, serif;
+      --font-body: Georgia, Cambria, "Times New Roman", Times, serif;
+    }
+
+    [data-theme="emerald-amber"] {
+      --accent: #7ac290;
+      --accent-alt: #6059d6;
+    }
+
+    /* Reset & Base Layout - Strict Flat 2D Aesthetic */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important; /* Sharp 90-degree corners */
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      border-bottom: 2px solid var(--border-color);
+      padding: 1.5rem 2rem;
+      background: var(--bg-card);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.8rem;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    nav a {
+      font-family: var(--font-display);
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .swatch-picker {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      border: 1px solid var(--border-color);
+      padding: 0.25rem 0.5rem;
+    }
+
+    .swatch-btn {
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.65rem;
+      line-height: 1.2;
+    }
+
+    /* Hero Section */
+    .hero {
+      border: 2px solid var(--border-color);
+      padding: 2.5rem;
+      background-color: var(--bg-card);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-family: var(--font-display);
+      background-color: var(--accent);
+      color: #ffffff;
+      padding: 0.2rem 0.6rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero-bio {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Grids & Cards */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      border: 2px solid var(--border-color);
+      padding: 1.5rem;
+      background: var(--bg-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #projects .grid-2 .card {
+      min-height: 600px;
+    }
+
+    .card-image-wrapper {
+      width: 100%;
+      height: 260px;
+      margin-top: auto;
+      border: 1px solid var(--border-color);
+      background: #f0f0f0;
+      overflow: hidden;
+    }
+
+    .card-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .skills-list li {
+      border: 1px solid var(--border-color);
+      padding: 0.25rem 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background-color: #f0f0f0;
+    }
+
+    /* Iframe Map Container */
+    .map-frame-container {
+      width: 100%;
+      height: 520px;
+      border: 2px solid var(--border-color);
+      margin-top: 1rem;
+      background-color: #f9f9f9;
+    }
+
+    .map-frame-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .map-caption {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    code {
+      font-family: Monaco, Consolas, monospace;
+      background: #f0f0f0;
+      padding: 2px 4px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      border-top: 2px solid var(--border-color);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      background: var(--bg-card);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Zenobia Calhoun | Statistics & Data Science</div>
+    <nav>
+      <a href="#goals">Goals</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <div class="swatch-picker">
+        <span style="font-size: 0.75rem; font-weight:700;">THEME:</span>
+        <div class="swatch-btn" style="background: #2563eb;" onclick="setTheme('default')" title="Blue / Red"></div>
+        <div class="swatch-btn" style="background: #059669;" onclick="setTheme('emerald-amber')" title="Emerald / Amber"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <span class="hero-tag">Undergraduate Data Science Major</span>
+      <h1 class="hero-title">Quantitative Analysis, Spatial Modeling & Machine Learning</h1>
+      <p class="hero-bio">
+        My name is Zenobia Calhoun. I am a Statistical & Data Sciences major at Smith College, graduating in May 2028. I am passionate about precise statistical modeling and its real world applications, including machine learning.
+      </p>
+    </section>
+
+    <!-- GOALS -->
+    <section id="goals">
+      <h2>Academic & Career Goals</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3> GPA: 3.87/4.00</h3>
+          <p> Relevant Coursework: Statistical Methods for Undergraduates (SDS 201), Introduction to Data Science (SDS 192), Linear Algebra (MTH 211),
+Introduction to Computer Science (CSC 110), Multiple Regression (SDS 291), Programming for Data Science in Python (SDS 270)</p>
+        </div>
+        <div class="card">
+          <h3>Long-Term Vision</h3>
+          <p>Develop automated open-data processing systems that support sustainable urban infrastructure, housing accessibility, and public transportation optimization.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Languages & Databases</h3>
+          <ul class="skills-list">
+            <li>Python</li>
+            <li>R / Quarto</li>
+            <li>SQL (PostgreSQL)</li>
+            <li>Bash</li>
+            <li>HTML/CSS</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Libraries & Tooling</h3>
+          <ul class="skills-list">
+            <li>Tidyverse / Leaflet</li>
+            <li>Pandas / Scikit-Learn</li>
+            <li>GeoPandas / SF</li>
+            <li>Git / GitHub</li>
+            <li>Streamlit</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+
+      <!-- PROJECT 1: Embedded Quarto Leaflet Map -->
+      <div class="card" style="margin-bottom: 2rem;">
+        <span class="hero-tag" style="background-color: var(--accent-alt);">Magic My Closet!</span>
+        <h3>1. Outfit Recommender using Tensor Decomposition & Low-Rank Approximation </h3>
+        <p>
+          I built an outfit recommender using a sparse matrix of 300 existing outfits. The program filters the data set for seasonal appropriateness, and then uses LRA to return the most likely new combinations. Currently building a full-stack web application to display the project. <br>
+          Skills: Python NumPy, Pandas, TensorLy, JavaScript React, CSS, SQL <br>
+          Select a season (1-4) to query the Tucker Tensor Decomposition model and generate top clothing combinations based on low-rank approximation confidence scores.
+        </p>
+        <!-- INTERACTIVE WIDGET -->
+  <div class="demo-box" style="margin-top: 1rem; border: 1px solid var(--border-color); padding: 1rem; background: #fafafa;">
+    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem;">
+      <label for="season-input" style="font-weight: bold; font-size: 0.9rem;">SELECT SEASON (1-4):</label>
+      <select id="season-input" style="padding: 0.3rem; border: 1px solid var(--border-color); font-family: var(--font-body);">
+        <option value="1">1 - Winter</option>
+        <option value="2">2 - Spring</option>
+        <option value="3">3 - Summer</option>
+        <option value="4">4 - Fall</option>
+      </select>
+      <button onclick="runModel()" style="padding: 0.35rem 0.8rem; background: var(--border-color); color: white; border: none; font-family: var(--font-display); font-size: 1rem; cursor: pointer;">
+        RUN TENSOR MODEL
+      </button>
+    </div>
+
+    <!-- OUTPUT TABLE CONTAINER -->
+    <div id="model-output" style="min-height: 180px; overflow-x: auto; background: white; border: 1px solid var(--border-color); padding: 0.5rem;">
+      <p style="color: var(--text-muted); font-style: italic; font-size: 0.85rem;">Select a season number above and click "Run Tensor Model" to display recommendations...</p>
+    </div>
+  </div>
+       
+      </div>
+
+      <!-- PROJECT 2 & 3 -->
+      <div class="grid-2">
+        <div class="card">
+          <span class="hero-tag">Research Investigation</span>
+          <h3>2. SHINE Clinical Trial</h3>
+          <p> Ran independent project on longitudinal clinical trial data, identifying strongest predictors for parenting styles in families with anxious children.<br>
+            Skills: Analysis Design, Sensitivity Analysis, VIFs, ANOVA, Hypothesis Testing
+          </p>
+          <div class="card-image-wrapper">
+            <img src="clinicaltrial.png" alt="Graph">
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="hero-tag">Geospatial Analysis</span>
+          <h3>3. NYC Subsidized Housing and Public Transportation Access</h3>
+          <p>Cleaned and joined open source data sets to calculate the distance from nearest subway stop to NYC housing projects with different proportions of low income units.<br>
+            Tools: Python (PANDAS, NumPy, SciPy: KDTree), R (dplyr, tidyverse), HTML (interactive graph elements)</p>
+          <div class="map-frame-container" style="height: 320px; margin-top: auto;">
+            <iframe src="nyhousing.html" title="NYC Housing & MTA Spatial Map"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Zenobia Calhoun. Built for GitHub Pages.</p>
+  </footer>
+
+  <script>
+    function setTheme(themeName) {
+      if (themeName === 'default') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', themeName);
+      }
+    }
+  </script>
+  <script>
+let modelData = null;
+
+// Fetch pre-computed recommendations on page load
+fetch('recommendations.json')
+  .then(response => response.json())
+  .then(data => { modelData = data; })
+  .catch(err => console.error('Error loading recommendations.json:', err));
+
+function runModel() {
+  const selectedSeason = document.getElementById('season-input').value;
+  const outputContainer = document.getElementById('model-output');
+
+  if (!modelData || !modelData[selectedSeason]) {
+    outputContainer.innerHTML = '<p style="color:red; font-size: 0.85rem;">Error: Model data not loaded. Please ensure recommendations.json is present.</p>';
+    return;
+  }
+
+  const seasonInfo = modelData[selectedSeason];
+  const results = seasonInfo.results;
+
+  if (results.length === 0) {
+    outputContainer.innerHTML = `<p>No recommendations found for ${seasonInfo.season_name}.</p>`;
+    return;
+  }
+
+  // Construct styled 2D table dynamically
+  let tableHTML = `
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; font-family: var(--font-body); text-align: left;">
+      <thead>
+        <tr style="border-bottom: 2px solid var(--border-color); background: #f0f0f0;">
+          <th style="padding: 6px; border-right: 1px solid var(--border-color);">Top</th>
+          <th style="padding: 6px; border-right: 1px solid var(--border-color);">Bottom</th>
+          <th style="padding: 6px; border-right: 1px solid var(--border-color);">A/L</th>
+          <th style="padding: 6px;">Confidence Score</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  results.forEach(row => {
+    tableHTML += `
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 6px; border-right: 1px solid #ddd;">${row.Top_Idx || row.Top || 'N/A'}</td>
+        <td style="padding: 6px; border-right: 1px solid #ddd;">${row.Bottom_Idx || row.Bottom || 'N/A'}</td>
+        <td style="padding: 6px; border-right: 1px solid #ddd;">${row.A_L_Idx || row['A/L'] || 'N/A'}</td>
+        <td style="padding: 6px; font-weight: bold;">${row.Match_Confidence_Score}</td>
+      </tr>
+    `;
+  });
+
+  tableHTML += `</tbody></table>`;
+  outputContainer.innerHTML = tableHTML;
+}
+</script>
+</body>
+</html>
+

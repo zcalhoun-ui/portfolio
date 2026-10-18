@@ -1,0 +1,166 @@
+{
+  "1": {
+    "season_name": "Winter",
+    "results": [
+      {
+        "Match_Confidence_Score": 0.3307,
+        "A_L_Idx": "striped sweater",
+        "Bottom_Idx": "Flare jeans",
+        "Top_Idx": "leopard top"
+      },
+      {
+        "Match_Confidence_Score": 0.3307,
+        "A_L_Idx": "striped sweater",
+        "Bottom_Idx": "Flare jeans",
+        "Top_Idx": "purple flower short dress"
+      },
+      {
+        "Match_Confidence_Score": 0.2887,
+        "A_L_Idx": "heart scarf",
+        "Bottom_Idx": "blue corderoys",
+        "Top_Idx": "gingham check button down"
+      },
+      {
+        "Match_Confidence_Score": 0.2236,
+        "A_L_Idx": "striped sweater",
+        "Bottom_Idx": "black jeans",
+        "Top_Idx": "one shoulder top"
+      },
+      {
+        "Match_Confidence_Score": 0.2236,
+        "A_L_Idx": "college hoodie",
+        "Bottom_Idx": "baggy jeans",
+        "Top_Idx": "one shoulder top"
+      },
+      {
+        "Match_Confidence_Score": 0.2236,
+        "A_L_Idx": "brown purse",
+        "Bottom_Idx": "brown corderoys",
+        "Top_Idx": "one shoulder top"
+      }
+    ]
+  },
+  "2": {
+    "season_name": "Spring",
+    "results": [
+      {
+        "Match_Confidence_Score": 0.5627,
+        "A_L_Idx": "tortoiseshell barettes",
+        "Bottom_Idx": "brown skirt",
+        "Top_Idx": "beige bear tshirt"
+      },
+      {
+        "Match_Confidence_Score": 0.5265,
+        "A_L_Idx": "white headband",
+        "Bottom_Idx": "baggy jeans",
+        "Top_Idx": "gingham check button down"
+      },
+      {
+        "Match_Confidence_Score": 0.516,
+        "A_L_Idx": "layer white tank",
+        "Bottom_Idx": "low rise shorts",
+        "Top_Idx": "gingham check button down"
+      },
+      {
+        "Match_Confidence_Score": 0.5054,
+        "A_L_Idx": "brown purse",
+        "Bottom_Idx": "grey skort",
+        "Top_Idx": "little twins tank"
+      },
+      {
+        "Match_Confidence_Score": 0.4998,
+        "A_L_Idx": "layer white tank",
+        "Bottom_Idx": "Gray jeans",
+        "Top_Idx": "pink flower tank"
+      },
+      {
+        "Match_Confidence_Score": 0.4845,
+        "A_L_Idx": "striped sweater",
+        "Bottom_Idx": "normal shape blue jeans",
+        "Top_Idx": "harmony in colors"
+      }
+    ]
+  },
+  "3": {
+    "season_name": "Summer",
+    "results": [
+      {
+        "Match_Confidence_Score": 0.5,
+        "A_L_Idx": "layer white tank",
+        "Bottom_Idx": "low rise shorts",
+        "Top_Idx": "gingham check button down"
+      },
+      {
+        "Match_Confidence_Score": 0.5,
+        "A_L_Idx": "layer white tank",
+        "Bottom_Idx": "grey skort",
+        "Top_Idx": "pink flower tank"
+      },
+      {
+        "Match_Confidence_Score": 0.3131,
+        "A_L_Idx": "white headband",
+        "Bottom_Idx": "green check shorts",
+        "Top_Idx": "blue dress shirt"
+      },
+      {
+        "Match_Confidence_Score": 0.3131,
+        "A_L_Idx": "white hat",
+        "Bottom_Idx": "linen pants",
+        "Top_Idx": "u-shaped white tank"
+      },
+      {
+        "Match_Confidence_Score": 0.3131,
+        "A_L_Idx": "white hat",
+        "Bottom_Idx": "purple flowered dress skirt",
+        "Top_Idx": "u-shaped white tank"
+      },
+      {
+        "Match_Confidence_Score": 0.307,
+        "A_L_Idx": "spiderman baseball cap",
+        "Bottom_Idx": "vintage shorts",
+        "Top_Idx": "moon tarot top"
+      }
+    ]
+  },
+  "4": {
+    "season_name": "Fall",
+    "results": [
+      {
+        "Match_Confidence_Score": 0.5207,
+        "A_L_Idx": "layer white tank",
+        "Bottom_Idx": "Gray jeans",
+        "Top_Idx": "black white layer top"
+      },
+      {
+        "Match_Confidence_Score": 0.4581,
+        "A_L_Idx": "heart scarf",
+        "Bottom_Idx": "grey skort",
+        "Top_Idx": "Redish purple sweater"
+      },
+      {
+        "Match_Confidence_Score": 0.4525,
+        "A_L_Idx": "layer white tank",
+        "Bottom_Idx": "baggy jorts",
+        "Top_Idx": "nyc grey shirt"
+      },
+      {
+        "Match_Confidence_Score": 0.446,
+        "A_L_Idx": "white headband",
+        "Bottom_Idx": "baggy jeans",
+        "Top_Idx": "gingham check button down"
+      },
+      {
+        "Match_Confidence_Score": 0.4356,
+        "A_L_Idx": "heart scarf",
+        "Bottom_Idx": "Gray jeans",
+        "Top_Idx": "Redish purple sweater"
+      },
+      {
+        "Match_Confidence_Score": 0.4225,
+        "A_L_Idx": "blue cardigan",
+        "Bottom_Idx": "brown skirt",
+        "Top_Idx": "u-shaped white tank"
+      }
+    ]
+  }
+}
