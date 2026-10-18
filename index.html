@@ -220,7 +220,7 @@
     /* Iframe Map Container */
     .map-frame-container {
       width: 100%;
-      height: 520px;
+      height: 600px;
       border: 2px solid var(--border-color);
       margin-top: 1rem;
       background-color: #f9f9f9;
@@ -365,7 +365,7 @@ Introduction to Computer Science (CSC 110), Multiple Regression (SDS 291), Progr
       <!-- PROJECT 1: Embedded Quarto Leaflet Map -->
       <div class="card" style="margin-bottom: 2rem;">
         <span class="hero-tag" style="background-color: var(--accent-alt);">Magic My Closet!</span>
-        <h3>1. Outfit Recommender using Tensor Decomposition & Low-Rank Approximation </h3>
+        <h3>Outfit Recommender using Tensor Decomposition & Low-Rank Approximation </h3>
         <p>
           I built an outfit recommender using a sparse matrix of 300 existing outfits. The program filters the data set for seasonal appropriateness, and then uses LRA to return the most likely new combinations. Currently building a full-stack web application to display the project. <br>
           Skills: Python NumPy, Pandas, TensorLy, JavaScript React, CSS, SQL <br>
@@ -374,7 +374,7 @@ Introduction to Computer Science (CSC 110), Multiple Regression (SDS 291), Progr
         <!-- INTERACTIVE WIDGET -->
   <div class="demo-box" style="margin-top: 1rem; border: 1px solid var(--border-color); padding: 1rem; background: #fafafa;">
     <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem;">
-      <label for="season-input" style="font-weight: bold; font-size: 0.9rem;">SELECT SEASON (1-4):</label>
+      <label for="season-input" style="font-weight: bold; font-size: 0.9rem;">SELECT SEASON:</label>
       <select id="season-input" style="padding: 0.3rem; border: 1px solid var(--border-color); font-family: var(--font-body);">
         <option value="1">1 - Winter</option>
         <option value="2">2 - Spring</option>
@@ -404,7 +404,7 @@ Introduction to Computer Science (CSC 110), Multiple Regression (SDS 291), Progr
       <div class="grid-2">
         <div class="card">
           <span class="hero-tag">Research Investigation</span>
-          <h3>2. SHINE Clinical Trial</h3>
+          <h3>SHINE Clinical Trial</h3>
           <p> Ran independent project on longitudinal clinical trial data, identifying strongest predictors for parenting styles in families with anxious children.<br>
             Skills: Analysis Design, Sensitivity Analysis, VIFs, ANOVA, Hypothesis Testing
           </p>
@@ -415,10 +415,13 @@ Introduction to Computer Science (CSC 110), Multiple Regression (SDS 291), Progr
 
         <div class="card">
           <span class="hero-tag">Geospatial Analysis</span>
-          <h3>3. NYC Subsidized Housing and Public Transportation Access</h3>
-          <p>Cleaned and joined open source data sets to calculate the distance from nearest subway stop to NYC housing projects with different proportions of low income units.<br>
-            Tools: Python (PANDAS, NumPy, SciPy: KDTree), R (dplyr, tidyverse), HTML (interactive graph elements)</p>
-          <div class="map-frame-container" style="height: 320px; margin-top: auto;">
+          <h3>NYC Subsidized Housing and Public Transportation Access</h3>
+          <p>
+            Cleaned and joined open source data sets to calculate the distance from nearest subway stop to NYC housing projects with different proportions of low income units.<br>
+            <i>This map displays New York Public Housing projects, sized by the number of units, and color coded by their proportion of low income units. Click on any individual dot to learn about that project. The small grey dots are subway lines. Visually, you can track the transportation accessibility of the projects.</i><br>
+            <b>Tools:</b> Python (PANDAS, NumPy, SciPy: KDTree), R (dplyr, tidyverse), HTML (interactive graph elements)
+          </p>
+          <div class="map-frame-container" style="height: 525px; margin-top: auto;">
             <iframe src="nyhousing.html" title="NYC Housing & MTA Spatial Map"></iframe>
           </div>
         </div>
