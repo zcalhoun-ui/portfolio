@@ -442,19 +442,24 @@ function runModel() {
   `;
 
   results.forEach(row => {
-    tableHTML += `
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 6px; border-right: 1px solid #ddd;">${row.Top_Idx || row.Top || 'N/A'}</td>
-        <td style="padding: 6px; border-right: 1px solid #ddd;">${row.Bottom_Idx || row.Bottom || 'N/A'}</td>
-        <td style="padding: 6px; border-right: 1px solid #ddd;">${row.A_L_Idx || row['A/L'] || 'N/A'}</td>
-        <td style="padding: 6px; font-weight: bold;">${row.Match_Confidence_Score}</td>
-      </tr>
-    `;
-  });
+        // Fallback checks for A_L_Idx, Accessories, or A/L keys from JSON
+        const accessoryVal = row.Accessories || row.A_L_Idx || row['A/L'] || row.A_L || 'N/A';
+        const topVal = row.Top || row.Top_Idx || 'N/A';
+        const bottomVal = row.Bottom || row.Bottom_Idx || 'N/A';
 
-  tableHTML += `</tbody></table>`;
-  outputContainer.innerHTML = tableHTML;
-}
+        tableHTML += `
+          <tr style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 6px; border-right: 1px solid #ddd;">${topVal}</td>
+            <td style="padding: 6px; border-right: 1px solid #ddd;">${bottomVal}</td>
+            <td style="padding: 6px; border-right: 1px solid #ddd;">${accessoryVal}</td>
+            <td style="padding: 6px; font-weight: bold;">${row.Match_Confidence_Score}</td>
+          </tr>
+        `;
+      });
+
+      tableHTML += `</tbody></table>`;
+      outputContainer.innerHTML = tableHTML;
+    }
 </script>
 </body>
 </html>
