@@ -1,6 +1,6 @@
 add.py
 filtering.py
-distnaces.py
+distances.py
 *.csv
 nyhousing.qmd
 .conda/
